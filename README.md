@@ -44,6 +44,19 @@ In Android Studio's Gradle tool window: **TeamCode** → **Tasks** → **verific
 ./gradlew :TeamCode:testSimulatedDebugUnitTest
 ```
 
+Outside Android Studio, `./gradlew` needs `JAVA_HOME` set to a JDK between 17 and 21. Android
+Studio's bundled JDK works. With Studio in its default location:
+
+```bash
+# macOS
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+# Windows, in Git Bash
+export JAVA_HOME="/c/Program Files/Android/Android Studio/jbr"
+```
+
+Without it, `./gradlew` runs whatever `java` is first on your PATH, which may be missing, the
+wrong version, or a tool manager's shim that has no version set for this folder.
+
 Two tests come with it:
 
 - `MecanumDrivePoseTest` runs `BasicMecanumTeleOp` with simulated gamepad input and checks the
