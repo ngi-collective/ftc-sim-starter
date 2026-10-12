@@ -44,7 +44,7 @@ In Android Studio's Gradle tool window: **TeamCode** → **Tasks** → **verific
 ./gradlew :TeamCode:testSimulatedDebugUnitTest
 ```
 
-Outside Android Studio, `./gradlew` needs `JAVA_HOME` set to a JDK between 17 and 21. Android
+Outside Android Studio, `./gradlew` needs `JAVA_HOME` set to a JDK between 17 and 25. Android
 Studio's bundled JDK works. With Studio in its default location:
 
 ```bash
