@@ -22,7 +22,7 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
-      # Gradle 9.1 and Android Gradle Plugin 8.13.2 need JDK 17 or later; 21 is the LTS both support.
+      # Gradle 9.1 and Android Gradle Plugin 8.13.2 need JDK 17 or later. The tests pass on 21 and 25.
       - uses: actions/setup-java@v6
         with:
           distribution: temurin
